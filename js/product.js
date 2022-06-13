@@ -39,7 +39,7 @@ fetch('http://localhost:3000/api/products/'+id).then(data=>data.json()).then(dat
             localStorage.setItem('cartItems',JSON.stringify([product]))
         }else{
             // the cart is not empty so we need to get the old values convert it back again
-            // to array and JSON to use it thenwe puch the created product to the array then save the new list with added items again to local storage 
+            // to array and JSON to use it then we puch the created product to the array then save the new list with added items again to local storage 
             let cartItems = JSON.parse( localStorage.getItem('cartItems'))
             cartItems.push(product)
             localStorage.setItem('cartItems',JSON.stringify(cartItems))
